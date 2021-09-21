@@ -1,0 +1,48 @@
+Создать функцию калькулятор. Передается 3 параметра: a, b и операция над ними.
+Возможные операции:
++: сложить a + b
+-: вычесть a - b
+*: умножить a * b
+/: разделить a / b
+%: остаток от деления a % b
+----
+function calculation(a, b, operation) {
+	if (operation === "+") {
+  	return a + b
+  }
+  if (operation === "-") {
+  	return a - b
+  }
+  if (operation === "*") {
+  	return a * b
+  }
+  if (operation === "/") {
+  	return a / b
+  }
+  if (operation === "%") {
+  	return a % b
+  }
+}
+
+console.log(calculation(-4, 4, "-"))
+console.log(calculation(7, 4, "+"))
+console.log(calculation(6, 4, "/"))
+console.log(calculation(2, 4, "*"))
+console.log(calculation(14, 5, "%"))
+
+-------------------------------------------------------------------
+Создайте функцию, которая принимает в качестве параметра целое число и возвращает значение true (истина), если число простое; иначе функция возвращает значение false (ложь).
+----
+function returnBoolean(number) {
+	if (parseInt(number) === number) {
+   return true
+  } else {
+  return false
+  }
+}
+
+console.log(returnBoolean(4))
+
+-------------------------------------------------------------------
+Создайте функцию, которая принимает в качестве параметра целое число и возвращает количество цифр в этом числе.
+----
