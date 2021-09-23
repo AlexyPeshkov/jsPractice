@@ -47,12 +47,17 @@ console.log(returnBoolean(4))
 Создайте функцию, которая принимает в качестве параметра целое число и возвращает количество цифр в этом числе.
 ----
 function numberOfCharacters(number) {
-	if(parseInt(number) === number){
-  	return number.toString().length
-  }
+	const array = number.toString().split('');
+  const count = [];
+  array.forEach(i => {
+  	if (parseInt(i)){
+    	count.push(i); 
+    }
+  })
+  return count.length;
 }
 
-console.log(numberOfCharacters(777))
+console.log(numberOfCharacters("kjsnfkjns-777.8843"))
 
 --------------------------------------------------------------------
 Создайте функцию, которая принимает в качестве параметра целое число и возвращает сумму его цифр.
@@ -85,3 +90,30 @@ function rgb(a, b, c) {
 }
 
 console.log(rgb(9, 5, 54))
+
+----------------------------------------------------------------------
+Создайте функцию, которая принимает в качестве параметров два целых числа (a и b) и выводит на экран все чётные числа из диапазона a...b
+----
+function evenNumberOutput(a, b) {
+  var array = [];
+  if (a < b) {
+  	for(var i = a; i <= b; i++){
+  	if (i % 2 === 0) {
+    	array.push(i);
+    }
+  }
+  } else {
+  for(var i = b; i <= a; i++){
+   if (i % 2 === 0){
+   	array.push(i);
+   }
+  }
+  }
+  
+  return array;
+}
+
+console.log(evenNumberOutput(10, 5));
+console.log(evenNumberOutput(5, 10));
+
+---------------------------------------------------------------------
